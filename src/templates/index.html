@@ -1,49 +1,26 @@
-<!doctype html>
-<html lang="pt-br" data-bs-theme="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clinica Colla</title>
-    <link rel="stylesheet" href="/src/static/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body >
-        <header class="p-3 mb-3 border-bottom">
-            <div class="container">
-              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
-                  <li><a href="sobre.html" class="nav-link px-2 link-body-emphasis">Sobre Nós</a></li>
-                  <li><a href="comprar.html" class="nav-link px-2 link-body-emphasis">Como Comprar</a></li>
-                </ul>
-        
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                  <input type="search" class="form-control" placeholder="Pesquisa..." aria-label="Search">
-                </form>
-              </div>
-            </div>
-          </header>
-    <main>
+{% extends 'base.html' %}
+
+{% block content %}
+
             <div class="container marketing">
               <div class="row">
                 <div class="col-lg-4">
-                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false" src="/src/static/img/image.png" alt="img44">
+                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false" src="../static/image.png" alt="img44">
                   <h2 class="fw-normal">Conheça nosso plano gratuito</h2>
                   <p>Venha conhecer nosso plano gratuito, onde vc apenas precisa se increver!</p>
-                  <p><a class="btn btn-secondary" href="comprar.html">Ver Mais Detalhes »</a></p>
+                  <p><a class="btn btn-secondary" href="comprar">Ver Mais Detalhes »</a></p>
                 </div>
                 <div class="col-lg-4">
-                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false" src="/src/static/img/image2.png" alt="img444">
+                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false" src="../static/image2.png" alt="img444">
                   <h2 class="fw-normal">Conheça nosso plano custo beneficio</h2>
                   <p>Um plano que cabe no seu bolso e te tras o melhor para você</p>
-                  <p><a class="btn btn-secondary" href="comprar.html">Ver Mais Detalhes »</a></p>
+                  <p><a class="btn btn-secondary" href="comprar">Ver Mais Detalhes »</a></p>
                 </div>
                 <div class="col-lg-4">
-                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false" src="/src/static/img/image3.png" alt="img4444">
+                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false" src="../static/image3.png" alt="img4444">
                   <h2 class="fw-normal">Conheça nossa plano Empresarial</h2>
                   <p>Um plano voltado para sua empresa, onde se é pago mensalmente sendo o mais barato do mercado</p>
-                  <p><a class="btn btn-secondary" href="comprar.html">Ver Mais Detalhes »</a></p>
+                  <p><a class="btn btn-secondary" href="comprar">Ver Mais Detalhes »</a></p>
                 </div>
               </div>
           
@@ -55,7 +32,7 @@
                   <p class="lead">Na Clínica Radiante, acreditamos que o cuidado personalizado e a inovação avançada são essenciais para transformar vidas. Nossa equipe dedicada está empenhada em oferecer uma gama abrangente de tratamentos e terapias, desde procedimentos estéticos avançados até terapias regenerativas inovadoras. Com instalações modernas e uma abordagem centrada no paciente, estamos prontos para ajudá-lo a alcançar um brilho radiante, tanto por dentro quanto por fora. Descubra uma nova perspectiva de vitalidade e renovação na Clínica Radiante, onde cada pessoa é tratada com o máximo cuidado e atenção para alcançar uma vida verdadeiramente radiante.</p>
                 </div>
                 <div class="col-md-6">
-                  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/src/static/img/doutor-feliz-segurando-uma-prancheta-com-pacientes.jpg" alt="img1">
+                  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../static/doutor-feliz-segurando-uma-prancheta-com-pacientes.jpg" alt="img1">
                 </div>
               </div>
           
@@ -67,7 +44,7 @@
                   <p class="lead">Na Clínica Serenity, estamos comprometidos em renovar todos os aspectos da sua vida, desde o seu bem-estar físico até o equilíbrio mental e espiritual. Com uma abordagem holística e uma equipe de profissionais especializados, oferecemos uma ampla gama de tratamentos personalizados, desde terapias de relaxamento até programas de condicionamento físico avançados. Descubra um refúgio de serenidade e transformação na Clínica Serenity, onde cada jornada é guiada pelo desejo de alcançar uma vida plena e significativa. De terapias de rejuvenescimento a programas de condicionamento físico personalizados, estamos aqui para ajudá-lo a descobrir o caminho para o bem-estar completo.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/src/static/img/jovem-medico-apoiando-o-seu-paciente.jpg" alt="img2">
+                  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../static/jovem-medico-apoiando-o-seu-paciente.jpg" alt="img2">
                 </div>
               </div>
 
@@ -79,26 +56,8 @@
                   <p class="lead">Na Clínica Renovar, acreditamos que cada indivíduo possui uma essência única que merece ser nutrida e fortalecida. Com uma abordagem centrada no cliente e uma variedade de serviços de bem-estar, estamos empenhados em ajudá-lo a descobrir o caminho para uma vida vibrante e saudável. Nossa equipe especializada está pronta para guiá-lo em uma jornada de transformação pessoal, oferecendo desde terapias revitalizantes até programas abrangentes de autocuidado. Encontre a verdadeira essência da vida na Clínica Renovar, onde cada passo é direcionado para fortalecer sua jornada em direção ao bem-estar pleno. Descubra a serenidade interior e o vigor físico enquanto embarca em uma jornada de harmonia e equilíbrio na Clínica Renovação Integral.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/src/static/img/retrato-de-jovens-medicos-sorridentes-juntos-retrato-da-equipe-medica-dentro-do-hospital-moderno-sorrindo-para-a-camera.jpg" alt="img2">
+                  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="../static/retrato-de-jovens-medicos-sorridentes-juntos-retrato-da-equipe-medica-dentro-do-hospital-moderno-sorrindo-para-a-camera.jpg" alt="img2">
                 </div>
               </div>
-
-    </main>
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Filipe Colla</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-              </ul>
-            </footer>
-        </div>
-  </body>
-</html>
+              
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if session['user'] == None %}
+<h2 class="listausers3">Você não tem permissão para acessar esta pagina</h2>
+{% else %}
+<div class="listausers">
+    <h2>Lista de pessoas cadastradas no site:</h2>
+<ul class="listausers2">
+    {% for usuario in usuarios %}
+        <li>{{ usuario.user_id }} - Nome: {{ usuario.user_nome }} - Sobrenome: {{ usuario.user_sobrenome}} - Usuario: {{ usuario.user_usuario}} - E-mail: {{ usuario.user_email }} - Senha: {{ usuario.user_senha }} - Estado: {{ usuario.user_estado }} - Cidade: {{ usuario.user_cidade }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}
+{% endblock %}

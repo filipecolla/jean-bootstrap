@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <main>
+      <div class="row g-5">
+            <div class="input-group">
+            </div>
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Cadastro</h4>
+          <form class="needs-validation" action="logar" novalidate="" method="post">
+            <div class="row g-3">
+  
+              <div class="col-12">
+                <label for="Email" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" name="Email" id="Email" placeholder="seuemail@gmai.com" required="">
+                <div class="invalid-feedback">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="Senha" class="form-label">Senha</label>
+                <div class="input-group has-validation">
+                  <input type="Senha" class="form-control" id="Senha" name="Senha" placeholder="*********" required="">
+                <div class="invalid-feedback">
+                  </div>
+                </div>
+              </div>
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Logar</button>
+  </div>
+
+{% endblock %}
