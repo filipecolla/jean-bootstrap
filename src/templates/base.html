@@ -12,23 +12,27 @@
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
   
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                {% if session['user'] == None %}
                 <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
                 <li><a href="sobre" class="nav-link px-2 link-body-emphasis">Sobre Nós</a></li>
                 <li><a href="comprar" class="nav-link px-2 link-body-emphasis">Como Comprar</a></li>
-                <li><a href="login" class="nav-link px-2 link-body-emphasis">Logar</a></li>
-                <li><a href="cadastro" class="nav-link px-2 link-body-emphasis">Cadastro</a></li>
-                {% else %}
-                <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="sobre" class="nav-link px-2 link-body-emphasis">Sobre Nós</a></li>
-                <li><a href="comprar" class="nav-link px-2 link-body-emphasis">Como Comprar</a></li>
-                <li><a href="logout" class="nav-link px-12 link-body-emphasis">Sair</a></li>
-                {% endif %}
               </ul>
   
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control" placeholder="Pesquisa..." aria-label="Search">
-          </form>
+          <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" role="search">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              {% if session['user'] == None %}
+              <li>
+                <a class="nav-link px-12 link-body-emphasis" href="/login">Login</a>
+              </li>
+              <li>
+                <a class="nav-link px-12 link-body-emphasis" href="/cadastro">Cadastro</a>
+              </li>
+              {% else %}
+              <li>
+                <a class="nav-link px-12 link-body-emphasis" href="/logout">Sair</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
         </div>
       </div>
     </header>

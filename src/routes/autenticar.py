@@ -83,13 +83,18 @@ def pagar():
     if len(cvv) > 3:
         flash('Insira apenas 3 digitos!')
         return redirect(url_for('checkout'))
+    
+    elif not Cadastro.query.filter_by(user_email=email).first():
+        flash('Email n registrado, compre com um email já cadastrado!')
+        return redirect(url_for('checkout'))
+    
+    else:
 
-    novoPagamento = Pagamento(user_nome=nome, user_sobrenome=sobrenome, user_email=email, user_nomeCartao=nomeCartao, user_numeroCartao=numeroCartao, user_cvv=cvv)
+        novoPagamento = Pagamento(user_nome=nome, user_sobrenome=sobrenome, user_email=email, user_nomeCartao=nomeCartao, user_numeroCartao=numeroCartao, user_cvv=cvv)
 
-    db.session.add(novoPagamento)
-    db.session.commit()
+        db.session.add(novoPagamento)
+        db.session.commit()
 
-    session['pagamento'] = novoPagamento.user2_id
+        session['pagamento'] = novoPagamento.user2_id
 
-    return redirect(url_for('pagamentoAprovado'))
-
+        return redirect(url_for('pagamentoAprovado'))

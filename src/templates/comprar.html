@@ -19,28 +19,28 @@
       </header>
     
       <main>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Grátis</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">R$0<small class="text-body-secondary fw-light">/BR</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>5 Consultas Online Gratuitas</li>
-                  <li>Agenda Com Pouca Disponibilidade</li>
-                  <li>Suporte Apenas Por Email</li>
-                  <li>Ajuda Apenas Pela Central Telefonica</li>
-                </ul>
                 {% if session['user'] == None %}
-                <a href="cadastro"><button type="button" class="w-100 btn btn-lg btn-primary">Se Inscreva!</button></a>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                  <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                      <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Grátis</h4>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">R$0<small class="text-body-secondary fw-light">/BR</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                          <li>5 Consultas Online Gratuitas</li>
+                          <li>Agenda Com Pouca Disponibilidade</li>
+                          <li>Suporte Apenas Por Email</li>
+                          <li>Ajuda Apenas Pela Central Telefonica</li>
+                        </ul>
+                        <a href="cadastro"><button type="button" class="w-100 btn btn-lg btn-primary">Se Inscreva!</button></a>
+                      </div>
+                    </div>
+                  </div>
                 {% else %}
-                <a href="/"><button type="button" class="w-100 btn btn-lg btn-primary">Você já faz parte deste plano!</button></a>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center mg-lg-3 justify-content-center">
                 {% endif %}
-              </div>
-            </div>
-          </div>
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-header py-3">
@@ -57,7 +57,7 @@
                 {% if session['user'] == None %}
                 <a href="cadastro"><button type="button" class="w-100 btn btn-lg btn-primary">Se inscreva antes de assinar!</button></a>
                 {% else %}
-                <a href="checkout"><button type="button" class="w-100 btn btn-lg btn-primary">Comece Agora</button></a>
+                <a href="checkout"><button type="button" class="w-100 btn btn-lg btn-primary">Aprimore Seu Plano!</button></a>
                 {% endif %}
               </div>
             </div>
@@ -78,7 +78,7 @@
                 {% if session['user'] == None %}
                 <a href="cadastro"><button type="button" class="w-100 btn btn-lg btn-primary">Se inscreva antes de assinar!</button></a>
                 {% else %}
-                <a href="checkout"><button type="button" class="w-100 btn btn-lg btn-primary">Comece Agora</button></a>
+                <a href="checkout"><button type="button" class="w-100 btn btn-lg btn-primary">Aprimore seu Plano!</button></a>
                 {% endif %}
               </div>
             </div>
